@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+header {
+    background: #8B1E3F; 
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+header .logo p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+nav {
+    background: #f8f8f8;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: #8B1E3F;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0 25px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #fff;
+    background: #8B1E3F;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+
+.section {
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #8B1E3F;
+}
+
+
+.filtro {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.filtro label {
+    font-weight: 600;
+    color: #8B1E3F;
+}
+
+.filtro select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #8B1E3F;
+    border-radius: 5px;
+    outline: none;
+}
+
+
+.produtos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.produto {
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto img {
+    width: 250px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.produto p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #8B1E3F;
+}
+
+.produto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+#contato a {
+    color: #8B1E3F;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #25D366; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#contato a:hover {
+    background-color: #128C7E; 
+}
+
+.whatsapp-icon {
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Rodapé */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+    .produtos {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .produto img {
+        width: 80%;
+    }
+
+    .filtro {
+        flex-direction: column;
+    }
+
+    .whatsapp-icon {
+        font-size: 20px;
+    }
+}
+
+
+
+#localizacao {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #8B1E3F;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+#localizacao a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#mapa {
+    height: 300px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

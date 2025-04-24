@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marseille Moda Maior - Cuiabá MT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzRC8_pPZH8cMUuOku2M0rmuKhEwlHj7M&callback=initMap" async defer></script>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Marseille Moda Maior</h1>
+            <p>SLOGAN DA LOJA</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <section id="sobre" class="section">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <p>Somos a Marseille Moda Maior com mais de 36 anos no mercado </p>
+        </div>
+    </section>
+
+    <section id="produtos" class="section">
+        <div class="container">
+            <h2>Nossos Produtos</h2>
+            <div class="filtro">
+                <label for="categoria">Escolha uma categoria:</label>
+                <select id="categoria" onchange="filtrarProdutos()">
+                    <option value="feminino">Feminino</option>
+                    <option value="masculino">Masculino</option>
+                </select>
+            </div>
+
+            <div id="produtos-feminino" class="produtos">
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300" alt="">
+                    <p>LEGENDA</p>
+                </div>
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300" alt="">
+                    <p>LEGENDA</p>
+                </div>
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300" alt="">
+                    <p>JLEGENDA</p>
+                </div>
+            </div>
+
+            <div id="produtos-masculino" class="produtos" style="display:none;">
+                <div class="produto">
+                    <img src="/WhatsApp Image 2025-04-24 at 09.19.57.jpeg" alt="">
+                    <p>LEGENDA</p>
+                </div>
+                <div class="produto">
+                    <img src="/WhatsApp Image 2025-04-24 at 09.19.58 (1).jpeg" alt="">
+                    <p>LEGENDA</p>
+                </div>
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300" alt="">
+                    <p>LEGENDA</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section">
+        <div class="container">
+            <h2>Contato</h2>
+            <p>📍 Endereço: Av. Jose Monteiro de Figueiredo, 65 - Cuiabá, MT, 78158-620</p>
+            <a href="https://wa.me/5565999999999" target="_blank" class="whatsapp-icon">
+                <i class="fab fa-whatsapp"></i> Fale conosco no WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Marseille Moda Maior - Todos os direitos reservados.</p>
+    </footer>
+
+    <div id="localizacao">
+        <i class="fas fa-map-marker-alt"></i>
+        <a href="https://www.google.com/maps?q=Av.+Jose+Monteiro+de+Figueiredo,+65+-+Duque+de+Caxias,+Cuiabá+-+MT,+78043-300" target="_blank">Av. José Monteiro de Figueiredo, 65 - Cuiabá</a>
+    </div>
+
+    <div id="mapa"></div>
+
+    <script>
+        
+        function initMap() {
+            var lojaLocation = { lat: -15.601, lng: -56.097 }; 
+            var map = new google.maps.Map(document.getElementById("mapa"), {
+                zoom: 15,
+                center: lojaLocation,
+            });
+            var marker = new google.maps.Marker({
+                position: lojaLocation,
+                map: map,
+                title: 'Marseille Moda Maior',
+            });
+        }
+
+        function filtrarProdutos() {
+            var categoria = document.getElementById("categoria").value;
+
+            if (categoria === "feminino") {
+                document.getElementById("produtos-feminino").style.display = "block";
+                document.getElementById("produtos-masculino").style.display = "none";
+            } else {
+                document.getElementById("produtos-feminino").style.display = "none";
+                document.getElementById("produtos-masculino").style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
