@@ -14,7 +14,7 @@ body {
 
 
 header {
-    background: #8B1E3F; 
+    background: #ba0707; 
     color: #fff;
     padding: 40px 20px;
     text-align: center;
@@ -41,7 +41,7 @@ nav {
 }
 
 nav a {
-    color: #8B1E3F;
+    color: #ba0707;
     font-weight: 600;
     text-decoration: none;
     margin: 0 25px;
@@ -50,7 +50,7 @@ nav a {
 
 nav a:hover {
     color: #fff;
-    background: #8B1E3F;
+    background: #ba0707;
     padding: 8px 16px;
     border-radius: 5px;
 }
@@ -69,7 +69,7 @@ nav a:hover {
 h2 {
     font-size: 32px;
     margin-bottom: 30px;
-    color: #8B1E3F;
+    color: #ba0707;
 }
 
 
@@ -83,13 +83,13 @@ h2 {
 
 .filtro label {
     font-weight: 600;
-    color: #8B1E3F;
+    color: #ba0707;
 }
 
 .filtro select {
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #8B1E3F;
+    border: 1px solid #ba0707;
     border-radius: 5px;
     outline: none;
 }
@@ -119,7 +119,7 @@ h2 {
 .produto p {
     font-size: 18px;
     font-weight: 600;
-    color: #8B1E3F;
+    color: #ba0707;
 }
 
 .produto:hover {
@@ -129,7 +129,7 @@ h2 {
 
 
 #contato a {
-    color: #8B1E3F;
+    color: #000000;
     font-weight: 600;
     text-decoration: none;
     display: inline-flex;
@@ -150,7 +150,7 @@ h2 {
     color: #fff;
 }
 
-/* Rodapé */
+
 footer {
     background: #333;
     color: #fff;
@@ -186,7 +186,7 @@ footer {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #8B1E3F;
+    background-color: #ba0707;
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
