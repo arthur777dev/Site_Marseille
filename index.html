@@ -6,17 +6,15 @@
     <title>Marseille Moda Maior - Cuiabá MT</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzRC8_pPZH8cMUuOku2M0rmuKhEwlHj7M&callback=initMap" async defer></script>
-
 </head>
 <body>
     <header>
         <div class="logo">
             <h1>Marseille Moda Maior</h1>
-            <p>SLOGAN DA LOJA</p>
+            <p>Plus Size</p>
         </div>
     </header>
 
@@ -29,7 +27,7 @@
     <section id="sobre" class="section">
         <div class="container">
             <h2>Sobre Nós</h2>
-            <p>Somos a Marseille Moda Maior com mais de 36 anos no mercado </p>
+            <p>Somos a Marseille Moda Maior com mais de 36 anos no mercado</p>
         </div>
     </section>
 
@@ -44,33 +42,69 @@
                 </select>
             </div>
 
-            <div id="produtos-feminino" class="produtos">
-                <div class="produto">
-                    <img src="https://via.placeholder.com/300" alt="">
-                    <p>LEGENDA</p>
-                </div>
-                <div class="produto">
-                    <img src="https://via.placeholder.com/300" alt="">
-                    <p>LEGENDA</p>
-                </div>
-                <div class="produto">
-                    <img src="https://via.placeholder.com/300" alt="">
-                    <p>JLEGENDA</p>
+            <div id="produtos-feminino">
+                <div class="swiper swiper-feminino">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide produto">
+                            <img src="/WhatsApp Image 2025-04-24 at 09.21.42.jpeg" alt="">
+                            <p>LEGENDA</p>
+                        </div>
+                        <div class="swiper-slide produto">
+                            <img src="/WhatsApp Image 2025-04-24 at 09.19.58 (3).jpeg" alt="">
+                            <p>LEGENDA</p>
+                        </div>
+                        <div class="swiper-slide produto">
+                            <img src="/WhatsApp Image 2025-04-24 at 09.19.58 (2).jpeg" alt="">
+                            <p>LEGENDA</p>
+                        </div>
+                        <div class="swiper-slide produto">
+                            <img src="/feminina1.jpeg" alt="">
+                            <p>LEGENDA</p>
+                        </div>
+                        <div class="swiper-slide produto">
+                            <img src="/feminina2.jpeg" alt="">
+                            <p>LEGENDA</p>
+                        </div>
+                        <div class="swiper-slide produto">
+                            <img src="/feminina3.jpeg" alt="">
+                            <p>LEGENDA</p>
+                        </div>
+                        <div class="swiper-slide produto">
+                            <img src="/feminina4.jpeg" alt="">
+                            <p>LEGENDA</p>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev-feminino"></div>
+                    <div class="swiper-button-next-feminino"></div>
                 </div>
             </div>
 
-            <div id="produtos-masculino" class="produtos" style="display:none;">
-                <div class="produto">
-                    <img src="/WhatsApp Image 2025-04-24 at 09.19.57.jpeg" alt="">
-                    <p>LEGENDA</p>
-                </div>
-                <div class="produto">
-                    <img src="/WhatsApp Image 2025-04-24 at 09.19.58 (1).jpeg" alt="">
-                    <p>LEGENDA</p>
-                </div>
-                <div class="produto">
-                    <img src="https://via.placeholder.com/300" alt="">
-                    <p>LEGENDA</p>
+            <div id="produtos-masculino" style="display:none;">
+                <div class="swiper swiper-masculino">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide produto">
+                            <img src="/WhatsApp Image 2025-04-24 at 09.19.57.jpeg" alt="">
+                            <p>LEGENDA</p>
+                        </div>
+                        <div class="swiper-slide produto">
+                            <img src="/WhatsApp Image 2025-04-24 at 09.19.58 (1).jpeg" alt="">
+                            <p>LEGENDA</p>
+                        </div>
+                        <div class="swiper-slide produto">
+                            <img src="/WhatsApp Image 2025-04-24 at 09.19.58.jpeg" alt="">
+                            <p>LEGENDA</p>
+                        </div>
+                        <div class="swiper-slide produto">
+                            <img src="/masculino1.jpeg" alt="">
+                            <p>LEGENDA</p>
+                        </div>
+                        <div class="swiper-slide produto">
+                            <img src="/masculino2.jpeg" alt="">
+                            <p>LEGENDA</p>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev-masculino"></div>
+                    <div class="swiper-button-next-masculino"></div>
                 </div>
             </div>
         </div>
@@ -97,32 +131,62 @@
 
     <div id="mapa"></div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        
         function initMap() {
-            var lojaLocation = { lat: -15.601, lng: -56.097 }; 
+            var lojaLocation = { lat: -15.601, lng: -56.097 };
             var map = new google.maps.Map(document.getElementById("mapa"), {
                 zoom: 15,
                 center: lojaLocation,
             });
-            var marker = new google.maps.Marker({
+            new google.maps.Marker({
                 position: lojaLocation,
                 map: map,
-                title: 'Marseille Moda Maior',
+                title: 'Marseille Moda Maior'
             });
         }
 
         function filtrarProdutos() {
-            var categoria = document.getElementById("categoria").value;
-
-            if (categoria === "feminino") {
-                document.getElementById("produtos-feminino").style.display = "block";
-                document.getElementById("produtos-masculino").style.display = "none";
-            } else {
-                document.getElementById("produtos-feminino").style.display = "none";
-                document.getElementById("produtos-masculino").style.display = "block";
-            }
+            const cat = document.getElementById("categoria").value;
+            document.getElementById("produtos-feminino").style.display = cat === "feminino" ? "block" : "none";
+            document.getElementById("produtos-masculino").style.display = cat === "masculino" ? "block" : "none";
         }
+
+        var swiperFem = new Swiper('.swiper-feminino', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next-feminino',
+                prevEl: '.swiper-button-prev-feminino'
+            },
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            }
+        });
+
+        var swiperMasc = new Swiper('.swiper-masculino', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next-masculino',
+                prevEl: '.swiper-button-prev-masculino'
+            },
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            }
+        });
     </script>
 </body>
 </html>
