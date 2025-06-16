@@ -8,6 +8,30 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        .localizacao-fixa {
+            position: fixed;
+            bottom: 15px;
+            left: 15px;
+            background-color: #d90429;
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+            z-index: 999;
+        }
+
+        .localizacao-fixa a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .localizacao-fixa a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -131,12 +155,12 @@
         <p>© 2025 Marseille Moda Maior - Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Localização fixa -->
-    <div class="localizacao-fixa">
-        <a href="https://www.google.com/maps?q=Av.+Jose+Monteiro+de+Figueiredo,+65+-+Cuiabá,+MT" target="_blank">
-            📍 Av. José Monteiro de Figueiredo, 65 - Cuiabá, MT
-        </a>
-    </div>
+  <div class="localizacao-fixa">
+    <a href="https://www.google.com/maps?q=Av.+Jose+Monteiro+de+Figueiredo,+65+-+Cuiabá,+MT" target="_blank">
+        <i class="fas fa-map-marker-alt"></i> Localização
+    </a>
+</div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
