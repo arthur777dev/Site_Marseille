@@ -1,127 +1,163 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Fonte principal e base */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #fff;
-    color: #333;
-    line-height: 1.6;
+    background: #fff;
+    color: #444;
+    line-height: 1.65;
+    font-size: 16px;
 }
 
+/* Header fixo e elegante */
 header {
-    background:#ba0707;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #b30606, #d31b1b);
     color: #fff;
-    padding: 40px 20px;
+    padding: 30px 20px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 15px rgba(179, 6, 6, 0.3);
+    z-index: 1000;
+    transition: background 0.3s ease;
 }
 
 header .logo h1 {
-    font-size: 36px;
-    font-weight: 600;
-    margin-bottom: 0;
-    line-height: 1.2;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-family: 'Montserrat', sans-serif;
 }
-
-
-
 
 header .logo p {
     font-size: 18px;
     font-weight: 400;
+    letter-spacing: 1.2px;
 }
 
+/* Espaço para compensar o header fixo */
+body > *:not(header):not(#localizacao) {
+    padding-top: 110px;
+}
+
+/* Navegação */
 nav {
-    background: #f8f8f8;
-    text-align: center;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
     padding: 15px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: sticky;
+    top: 80px;
+    z-index: 900;
 }
 
 nav a {
-    color: #ba0707;
+    color: #b30606;
     font-weight: 600;
     text-decoration: none;
-    margin: 0 25px;
-    transition: all 0.3s ease;
-}
-
-nav a:hover {
-    color: #fff;
-    background: #ba0707;
+    margin: 0 30px;
+    font-size: 18px;
     padding: 8px 16px;
-    border-radius: 5px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+nav a:hover,
+nav a:focus {
+    color: #fff;
+    background-color: #b30606;
+    box-shadow: 0 4px 12px rgba(179, 6, 6, 0.4);
+}
+
+/* Seções com background suave e padding maior */
 .section {
-    padding: 60px 20px;
-}
-
-.container {
+    padding: 80px 20px;
+    background: #fafafa;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+    margin: 40px auto;
     max-width: 1100px;
-    margin: auto;
-    text-align: center;
 }
 
+/* Títulos */
 h2 {
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 30px;
-    color: #ba0707;
+    color: #b30606;
+    font-weight: 700;
+    letter-spacing: 1.2px;
 }
 
+/* Filtro categoria */
 .filtro {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
+    font-size: 18px;
 }
 
 .filtro label {
-    font-weight: 600;
-    color: #ba0707;
+    font-weight: 700;
+    color: #b30606;
 }
 
 .filtro select {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ba0707;
-    border-radius: 5px;
+    padding: 12px 18px;
+    font-size: 18px;
+    border: 2px solid #b30606;
+    border-radius: 10px;
     outline: none;
+    transition: border-color 0.3s ease;
 }
 
+.filtro select:focus {
+    border-color: #7a0404;
+}
+
+/* Produto cards */
 .produto {
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 10px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px 15px;
+    box-shadow: 0 6px 15px rgba(179, 6, 6, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.produto img {
-    width: 250px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.produto p {
-    font-size: 18px;
-    font-weight: 600;
-    color: #ba0707;
+    cursor: pointer;
 }
 
 .produto:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(179, 6, 6, 0.25);
 }
 
+.produto img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.produto p {
+    font-size: 20px;
+    font-weight: 700;
+    color: #b30606;
+}
+
+/* Swiper adjustments */
 .swiper {
     width: 100%;
-    padding-top: 20px;
-    padding-bottom: 40px;
+    padding: 20px 0 40px 0;
 }
 
 .swiper-slide {
@@ -130,13 +166,16 @@ h2 {
     align-items: center;
 }
 
+/* Navigation buttons */
 .swiper-button-prev-feminino,
 .swiper-button-next-feminino,
 .swiper-button-prev-masculino,
 .swiper-button-next-masculino {
-    color: #ba0707;
-    font-weight: bold;
-    scale: 1.2;
+    color: #b30606;
+    font-weight: 700;
+    scale: 1.3;
+    filter: drop-shadow(0 2px 3px rgba(179, 6, 6, 0.3));
+    transition: color 0.3s ease, filter 0.3s ease;
 }
 
 .swiper-button-prev-feminino:hover,
@@ -144,87 +183,149 @@ h2 {
 .swiper-button-prev-masculino:hover,
 .swiper-button-next-masculino:hover {
     color: #7a0404;
+    filter: drop-shadow(0 4px 6px rgba(122, 4, 4, 0.5));
 }
 
+/* WhatsApp link button */
 #contato a.whatsapp-link {
-    color: #000;
-    font-weight: 600;
-    text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    background-color: #009440; 
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, border 0.3s ease;
-    font-size: 25px;
-   ; 
+    gap: 12px;
+    background-color: #00b862;
+    color: #fff;
+    font-weight: 700;
+    font-size: 22px;
+    padding: 14px 26px;
+    border-radius: 30px;
+    box-shadow: 0 6px 15px rgba(0, 184, 98, 0.5);
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #contato a.whatsapp-link:hover {
-    background-color: #128C7E; 
-    
+    background-color: #009440;
+    box-shadow: 0 8px 20px rgba(0, 148, 64, 0.6);
 }
 
-
-
-#contato a:hover {
-    background-color: #128C7E;
-}
-
+/* WhatsApp icon */
 .whatsapp-icon {
-    font-size: 24px;
+    font-size: 26px;
     color: #fff;
 }
 
+/* Footer */
 footer {
-    background: #333;
-    color: #fff;
+    background: #1a1a1a;
+    color: #ddd;
     text-align: center;
-    padding: 30px 20px;
-    margin-top: 40px;
-    font-size: 14px;
+    padding: 35px 20px;
+    margin-top: 60px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
+footer p {
+    margin: 0;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
     .filtro {
         flex-direction: column;
+        gap: 20px;
+        font-size: 16px;
     }
 
     .produto img {
-        width: 80%;
+        max-width: 100%;
     }
 
-    .whatsapp-icon {
-        font-size: 20px;
+    #contato a.whatsapp-link {
+        font-size: 18px;
+        padding: 12px 20px;
     }
 }
 
+/* Localização fixa */
 #localizacao {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #ba0707;
+    bottom: 25px;
+    right: 25px;
+    background-color: #b30606;
     color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 12px 25px;
+    border-radius: 50px;
+    box-shadow: 0 6px 20px #b30606(179, 6, 6, 0.3);
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     cursor: pointer;
+    font-weight: 700;
+    font-size: 17px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1500;
+}
+
+#localizacao:hover {
+    background-color: #7a0404;
+    box-shadow: 0 8px 25px rgba(122, 4, 4, 0.6);
 }
 
 #localizacao a {
     color: #fff;
     text-decoration: none;
-    font-weight: 600;
 }
 
+/* Mapa */
 #mapa {
-    height: 300px;
+    height: 350px;
     width: 100%;
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border: none;
 }
+
+
+
+
+
+    .localizacao-fixa {
+        position: fixed;
+        bottom: 16px;
+        left: 16px;
+        background-color: #d90429; /* Vermelho da identidade visual */
+        color: #fff;
+        padding: 6px 10px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-family: 'Montserrat', sans-serif;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.3s ease;
+    }
+
+    .localizacao-fixa:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .localizacao-fixa a {
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .localizacao-fixa i {
+        margin-right: 4px;
+    }
+
+
+
+
