@@ -1,331 +1,137 @@
-/* Reset */
+/* Reset e Configurações Globais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-/* Fonte principal e base */
 body {
     font-family: 'Montserrat', sans-serif;
     background: #fff;
     color: #444;
     line-height: 1.65;
     font-size: 16px;
+    /* Espaço no topo para o header e navbar fixos */
+    padding-top: 225px; 
 }
 
-/* Header fixo e elegante */
+/* Header Fixo - TAMANHO FINAL E CONTEÚDO CENTRALIZADO */
 header {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     background: linear-gradient(90deg, #b30606, #d31b1b);
     color: #fff;
-    padding: 30px 20px;
+    z-index: 1100;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;   /* Centraliza verticalmente */
+    height: 160px;          /* Altura final do header, bem maior */
+    padding: 0 20px;
     text-align: center;
-    box-shadow: 0 6px 15px rgba(179, 6, 6, 0.3);
-    z-index: 1000;
-    transition: background 0.3s ease;
 }
 
 header .logo h1 {
     font-size: 38px;
-    font-weight: 700;
     line-height: 1.1;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    font-weight: 700;
 }
 
 header .logo p {
     font-size: 18px;
+    margin-top: 8px;
     font-weight: 400;
-    letter-spacing: 1.2px;
 }
 
-/* Espaço para compensar o header fixo */
-body > *:not(header):not(#localizacao) {
-    padding-top: 110px;
-}
-
-/* Navegação */
-nav {
-    background: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
-    padding: 15px 0;
+/* Navbar Fixa - ESTILO FINAL */
+#main-nav {
+    position: fixed;
+    top: 160px;     /* Posição exatamente abaixo do novo header */
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    padding: 10px 0;
     text-align: center;
-    position: sticky;
-    top: 80px;
-    z-index: 900;
+    border-bottom: 1px solid #e7e7e7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    z-index: 1099;
 }
 
-nav a {
-    color: #b30606;
-    font-weight: 600;
+#main-nav a {
+    color: #b30606; /* Cor do texto alterada para vermelho */
+    font-weight: 700; /* Letras mais grossas (bold) */
     text-decoration: none;
-    margin: 0 30px;
-    font-size: 18px;
-    padding: 8px 16px;
-    border-radius: 6px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0 15px;
+    font-size: 16px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
 }
 
-nav a:hover,
-nav a:focus {
+#main-nav a:hover,
+#main-nav a:focus {
     color: #fff;
     background-color: #b30606;
-    box-shadow: 0 4px 12px rgba(179, 6, 6, 0.4);
 }
 
-/* Seções com background suave e padding maior */
+/* Seções */
 .section {
-    padding: 80px 20px;
+    padding: 60px 20px;
     background: #fafafa;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
-    margin: 40px auto;
+    margin: 30px auto;
     max-width: 1100px;
 }
 
-/* Títulos */
 h2 {
     font-size: 36px;
     margin-bottom: 30px;
     color: #b30606;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-}
-
-/* Filtro categoria */
-.filtro {
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    font-size: 18px;
-}
-
-.filtro label {
-    font-weight: 700;
-    color: #b30606;
-}
-
-.filtro select {
-    padding: 12px 18px;
-    font-size: 18px;
-    border: 2px solid #b30606;
-    border-radius: 10px;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-.filtro select:focus {
-    border-color: #7a0404;
-}
-
-/* Produto cards */
-.produto {
     text-align: center;
-    background: #fff;
-    border-radius: 15px;
-    padding: 25px 15px;
-    box-shadow: 0 6px 15px rgba(179, 6, 6, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
 }
 
-.produto:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(179, 6, 6, 0.25);
-}
+/* O resto do CSS permanece o mesmo */
+.filtro { margin-bottom: 40px; display: flex; justify-content: center; align-items: center; gap: 15px; font-size: 18px; }
+.filtro label { font-weight: 700; color: #b30606; }
+.filtro select { padding: 12px 18px; font-size: 18px; border: 2px solid #b30606; border-radius: 10px; outline: none; }
+.produto { text-align: center; background: #fff; border-radius: 15px; padding: 25px 15px; box-shadow: 0 6px 15px rgba(179, 6, 6, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; }
+.produto:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(179, 6, 6, 0.25); }
+.produto img { width: 100%; max-width: 280px; border-radius: 15px; margin-bottom: 15px; object-fit: cover; aspect-ratio: 1 / 1.25; }
+.swiper { width: 100%; padding: 20px 0 40px 0; }
+.swiper-slide { display: flex; flex-direction: column; align-items: center; }
+.swiper-button-prev-feminino, .swiper-button-next-feminino, .swiper-button-prev-masculino, .swiper-button-next-masculino { color: #b30606; transform: scale(0.8); }
+#contato a.whatsapp-link { display: inline-flex; align-items: center; gap: 12px; background-color: #25D366; color: #fff; font-weight: 700; font-size: 22px; padding: 14px 26px; border-radius: 30px; text-decoration: none; margin-top: 20px; }
+footer { background: #1a1a1a; color: #ddd; text-align: center; padding: 35px 20px; margin-top: 60px; }
+.localizacao-fixa { position: fixed; bottom: 20px; left: 20px; background: linear-gradient(45deg, #d90429, #b30606); color: #fff; padding: 12px 20px; border-radius: 50px; font-weight: 600; font-size: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); z-index: 1000; display: flex; align-items: center; gap: 10px; transition: all 0.3s ease-in-out; }
+.localizacao-fixa a { color: #fff; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+.localizacao-fixa i { font-size: 20px; }
+.voltar-ao-topo { position: fixed; bottom: 20px; right: 20px; background-color: #b30606; color: #fff; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; text-decoration: none; z-index: 1000; opacity: 0; visibility: hidden; transform: translateY(20px); transition: all 0.3s ease; }
+.voltar-ao-topo.visivel { opacity: 1; visibility: visible; transform: translateY(0); }
 
-.produto img {
-    width: 100%;
-    max-width: 280px;
-    border-radius: 15px;
-    margin-bottom: 15px;
-    object-fit: cover;
-}
-
-.produto p {
-    font-size: 20px;
-    font-weight: 700;
-    color: #b30606;
-}
-
-/* Swiper adjustments */
-.swiper {
-    width: 100%;
-    padding: 20px 0 40px 0;
-}
-
-.swiper-slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Navigation buttons */
-.swiper-button-prev-feminino,
-.swiper-button-next-feminino,
-.swiper-button-prev-masculino,
-.swiper-button-next-masculino {
-    color: #b30606;
-    font-weight: 700;
-    scale: 1.3;
-    filter: drop-shadow(0 2px 3px rgba(179, 6, 6, 0.3));
-    transition: color 0.3s ease, filter 0.3s ease;
-}
-
-.swiper-button-prev-feminino:hover,
-.swiper-button-next-feminino:hover,
-.swiper-button-prev-masculino:hover,
-.swiper-button-next-masculino:hover {
-    color: #7a0404;
-    filter: drop-shadow(0 4px 6px rgba(122, 4, 4, 0.5));
-}
-
-/* WhatsApp link button */
-#contato a.whatsapp-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    background-color: #00b862;
-    color: #fff;
-    font-weight: 700;
-    font-size: 22px;
-    padding: 14px 26px;
-    border-radius: 30px;
-    box-shadow: 0 6px 15px rgba(0, 184, 98, 0.5);
-    text-decoration: none;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-#contato a.whatsapp-link:hover {
-    background-color: #009440;
-    box-shadow: 0 8px 20px rgba(0, 148, 64, 0.6);
-}
-
-/* WhatsApp icon */
-.whatsapp-icon {
-    font-size: 26px;
-    color: #fff;
-}
-
-/* Footer */
-footer {
-    background: #1a1a1a;
-    color: #ddd;
-    text-align: center;
-    padding: 35px 20px;
-    margin-top: 60px;
-    font-size: 15px;
-    letter-spacing: 1px;
-    font-weight: 400;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Responsividade */
+/* --- Media Query para Telas Pequenas (Mobile) --- */
 @media (max-width: 768px) {
-    .filtro {
-        flex-direction: column;
-        gap: 20px;
-        font-size: 16px;
+    body {
+        padding-top: 155px;
     }
-
-    .produto img {
-        max-width: 100%;
+    header {
+        height: 100px;
     }
-
-    #contato a.whatsapp-link {
-        font-size: 18px;
-        padding: 12px 20px;
+    header .logo h1 {
+        font-size: 28px;
     }
+    #main-nav {
+        top: 100px;
+    }
+    #main-nav a {
+        margin: 0 4px;
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+    h2 { font-size: 28px; }
+    .filtro { flex-direction: column; }
+    #contato a.whatsapp-link { font-size: 18px; padding: 12px 20px; }
 }
-
-/* Localização fixa */
-#localizacao {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background-color: #b30606;
-    color: #fff;
-    padding: 12px 25px;
-    border-radius: 50px;
-    box-shadow: 0 6px 20px #b30606(179, 6, 6, 0.3);
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 17px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1500;
-}
-
-#localizacao:hover {
-    background-color: #7a0404;
-    box-shadow: 0 8px 25px rgba(122, 4, 4, 0.6);
-}
-
-#localizacao a {
-    color: #fff;
-    text-decoration: none;
-}
-
-/* Mapa */
-#mapa {
-    height: 350px;
-    width: 100%;
-    margin-top: 25px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    border: none;
-}
-
-
-
-
-
-    .localizacao-fixa {
-        position: fixed;
-        bottom: 16px;
-        left: 16px;
-        background-color: #d90429; /* Vermelho da identidade visual */
-        color: #fff;
-        padding: 6px 10px;
-        border-radius: 20px;
-        font-size: 13px;
-        font-family: 'Montserrat', sans-serif;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-        z-index: 999;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        transition: all 0.3s ease;
-    }
-
-    .localizacao-fixa:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-    }
-
-    .localizacao-fixa a {
-        color: #fff;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-    }
-
-    .localizacao-fixa i {
-        margin-right: 4px;
-    }
-
-
-
-

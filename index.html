@@ -1,38 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17341612874"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-17341612874'); </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17341612874"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-17341612874'); </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Marseille Moda Maior: especialista em moda plus size e curve em Cuiabá. Roupas femininas (42 ao 60) e masculinas (46 ao 76). Qualidade e estilo há mais de 36 anos." />
     <title>Marseille Moda Maior - Cuiabá MT</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <style>
-        .localizacao-fixa {
-            position: fixed;
-            bottom: 15px;
-            left: 15px;
-            background-color: #d90429;
-            color: #fff;
-            padding: 10px 16px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-family: 'Montserrat', sans-serif;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
-            z-index: 999;
-        }
-
-        .localizacao-fixa a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .localizacao-fixa a:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -43,203 +20,142 @@
         </div>
     </header>
 
-    <nav>
+    <nav id="main-nav">
         <a href="#sobre">Sobre</a>
         <a href="#produtos">Produtos</a>
         <a href="#contato">Contatos</a>
     </nav>
 
-    <section id="sobre" class="section">
-        <div class="container">
-            <h2>Sobre Nós</h2>
-            <p>Na <strong>Marseille Moda Maior</strong>, celebramos a diversidade e a beleza em todas as curvas e tamanhos! 💃</p>
-            <p>Nossa missão é oferecer <strong>looks incríveis e confortáveis</strong> para mulheres (tamanhos 42 ao 60) e homens (tamanhos 46 ao 76), desde lingerie até roupas para ocasiões especiais.</p>
-            <h3>Moda Curve com Estilo 👗</h3>
-            <p>Somos especialistas em <strong>moda plus size</strong> e <strong>moda curve</strong>, com peças que valorizam sua beleza e individualidade. Nossa equipe está sempre pronta para ajudá-lo a encontrar o look perfeito!</p>
-            <h3>Tradição e Excelência 🏆</h3>
-            <p>Com mais de <strong>36 anos de experiência</strong> no mercado plus, garantimos qualidade e confiança em cada peça. Já atendemos mais de <strong>10 mil clientes</strong>, sempre com dedicação, carinho e um atendimento personalizado que faz toda a diferença.</p>
-            <h3>Atendimento Personalizado 🤗</h3>
-            <p>Em nossa <strong>loja física</strong>, você encontra um atendimento diferenciado e exclusivo. Nossa equipe está preparada para oferecer dicas, sugestões e ajudar você a montar produções que realcem sua beleza!</p>
-            <h3>Visite Nossa Loja Física 📍</h3>
-            <p>Venha nos visitar e descubra por que somos referência em <strong>moda plus size</strong> e <strong>moda curve</strong> em Cuiabá!</p>
-        </div>
-    </section>
-
-    <section id="produtos" class="section">
-        <div class="container">
-            <h2>Nossos Produtos</h2>
-            <div class="filtro">
-                <label for="categoria">Escolha uma categoria:</label>
-                <select id="categoria">
-                    <option value="feminino">Feminino</option>
-                    <option value="masculino">Masculino</option>
-                </select>
+    <main>
+        <section id="sobre" class="section">
+            <div class="container">
+                <h2>Sobre Nós</h2>
+                <p>Na <strong>Marseille Moda Maior</strong>, celebramos a diversidade e a beleza em todas as curvas e tamanhos! 💃</p>
+                <p>Nossa missão é oferecer <strong>looks incríveis e confortáveis</strong> para mulheres (tamanhos 42 ao 60) e homens (tamanhos 46 ao 76), desde lingerie até roupas para ocasiões especiais.</p>
+                <h3>Moda Curve com Estilo 👗</h3>
+                <p>Somos especialistas em <strong>moda plus size</strong> e <strong>moda curve</strong>, com peças que valorizam sua beleza e individualidade. Nossa equipe está sempre pronta para ajudá-lo a encontrar o look perfeito!</p>
+                <h3>Tradição e Excelência 🏆</h3>
+                <p>Com mais de <strong>36 anos de experiência</strong> no mercado plus, garantimos qualidade e confiança em cada peça. Já atendemos mais de <strong>10 mil clientes</strong>, sempre com dedicação, carinho e um atendimento personalizado que faz toda a diferença.</p>
+                <h3>Atendimento Personalizado 🤗</h3>
+                <p>Em nossa <strong>loja física</strong>, você encontra um atendimento diferenciado e exclusivo. Nossa equipe está preparada para oferecer dicas, sugestões e ajudar você a montar produções que realcem sua beleza!</p>
+                <h3>Visite Nossa Loja Física 📍</h3>
+                <p>Venha nos visitar e descubra por que somos referência em <strong>moda plus size</strong> e <strong>moda curve</strong> em Cuiabá!</p>
             </div>
+        </section>
 
-            <div id="produtos-feminino">
-                <div class="swiper swiper-feminino">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide produto">
-                            <img src="/fotos/feminino1.jpeg" alt="Produto feminino 1" />
+        <section id="produtos" class="section">
+            <div class="container">
+                <h2>Nossos Produtos</h2>
+                <div class="filtro">
+                    <label for="categoria">Escolha uma categoria:</label>
+                    <select id="categoria">
+                        <option value="feminino">Feminino</option>
+                        <option value="masculino">Masculino</option>
+                    </select>
+                </div>
+
+                <div id="produtos-feminino">
+                    <div class="swiper swiper-feminino">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide produto">
+                                <img src="/fotos/feminino1.jpeg" alt="Dois looks plus size femininos com estampa marrom e branca" loading="lazy" />
+                            </div>
+                            <div class="swiper-slide produto">
+                                <img src="/fotos/casaco_femenino.jpeg" alt="Cardigan feminino plus size azul marinho" loading="lazy" />
+                            </div>
+                            <div class="swiper-slide produto">
+                                <img src="/fotos/feminino3.jpeg" alt="Look plus size com calça preta e blusa estampada" loading="lazy" />
+                            </div>
+                            <div class="swiper-slide produto">
+                                <img src="/fotos/feminino4.jpeg" alt="Pijama feminino plus size com calça capri" loading="lazy" />
+                            </div>
+                            <div class="swiper-slide produto">
+                                <img src="/fotos/femenino5.jpeg" alt="Camisola plus size verde com bolinhas" loading="lazy" />
+                            </div>
+                            <div class="swiper-slide produto">
+                                <img src="/fotos/sutiã1.jpeg" alt="Conjunto de lingerie preta plus size" loading="lazy" />
+                            </div>
+                            <div class="swiper-slide produto">
+                                <img src="/fotos/calçola.jpeg" alt="Bermuda modeladora plus size cor da pele" loading="lazy" />
+                            </div>
                         </div>
-                        <div class="swiper-slide produto">
-                            <img src="/fotos/casaco_femenino.jpeg" alt="Casaco feminino" />
-                        </div>
-                        <div class="swiper-slide produto">
-                            <img src="/fotos/feminino3.jpeg" alt="Produto feminino 3" />
-                        </div>
-                        <div class="swiper-slide produto">
-                            <img src="/fotos/feminino4.jpeg" alt="Produto feminino 4" />
-                        </div>
-                        <div class="swiper-slide produto">
-                            <img src="/fotos/femenino5.jpeg" alt="Produto feminino 5" />
-                        </div>
-                        <div class="swiper-slide produto">
-                            <img src="/fotos/sutiã1.jpeg" alt="Sutiã" />
-                        </div>
-                        <div class="swiper-slide produto">
-                            <img src="/fotos/calçola.jpeg" alt="Calçola" />
-                        </div>
+                        <div class="swiper-button-prev-feminino"></div>
+                        <div class="swiper-button-next-feminino"></div>
                     </div>
-                    <div class="swiper-button-prev-feminino"></div>
-                    <div class="swiper-button-next-feminino"></div>
+                </div>
+
+                <div id="produtos-masculino" style="display:none;">
+                    <div class="swiper swiper-masculino">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide produto">
+                                <img src="/fotos/masculino1.jpeg" alt="Homem plus size com camiseta listrada" loading="lazy" />
+                            </div>
+                            <div class="swiper-slide produto">
+                                <img src="/fotos/masculino2.jpeg" alt="Homem plus size com camiseta azul e bermuda jeans" loading="lazy" />
+                            </div>
+                            <div class="swiper-slide produto">
+                                <img src="/fotos/masculino3.jpeg" alt="Camisa social preta masculina plus size" loading="lazy" />
+                            </div>
+                            <div class="swiper-slide produto">
+                                <img src="/fotos/masculino4.jpeg" alt="Camisa de manga curta azul masculina plus size" loading="lazy" />
+                            </div>
+                            <div class="swiper-slide produto">
+                                <img src="/fotos/masculino5.jpeg" alt="Jaqueta de couro marrom masculina plus size" loading="lazy" />
+                            </div>
+                            <div class="swiper-slide produto">
+                                <img src="/fotos/masculino6.jpeg" alt="Camisa polo vermelha masculina plus size" loading="lazy" />
+                            </div>
+                            <div class="swiper-slide produto">
+                                <img src="/fotos/masculino7.jpeg" alt="Look masculino plus size com camiseta preta" loading="lazy" />
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev-masculino"></div>
+                        <div class="swiper-button-next-masculino"></div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div id="produtos-masculino" style="display:none;">
-                <div class="swiper swiper-masculino">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide produto">
-                            <img src="/fotos/masculino1.jpeg" alt="Produto masculino 1" />
-                        </div>
-                        <div class="swiper-slide produto">
-                            <img src="/fotos/masculino2.jpeg" alt="Produto masculino 2" />
-                        </div>
-                        <div class="swiper-slide produto">
-                            <img src="/fotos/masculino3.jpeg" alt="Produto masculino 3" />
-                        </div>
-                        <div class="swiper-slide produto">
-                            <img src="/fotos/masculino4.jpeg" alt="Produto masculino 4" />
-                        </div>
-                        <div class="swiper-slide produto">
-                            <img src="/fotos/masculino5.jpeg" alt="Produto masculino 5" />
-                        </div>
-                        <div class="swiper-slide produto">
-                            <img src="/fotos/masculino6.jpeg" alt="Produto masculino 6" />
-                        </div>
-                        <div class="swiper-slide produto">
-                            <img src="/fotos/masculino7.jpeg" alt="Produto masculino 7" />
-                        </div>
-                    </div>
-                    <div class="swiper-button-prev-masculino"></div>
-                    <div class="swiper-button-next-masculino"></div>
-                </div>
+        <section id="contato" class="section">
+            <div class="container">
+                <h2>Contatos</h2>
+                <p>📍 Endereço: Av. Jose Monteiro de Figueiredo, 65 - Cuiabá, MT, 78158-620</p>
+                <p>📞 WhatsApp: <a href="https://wa.me/556599905458" target="_blank">(65) 99905-458</a></p>
+                <p>📸 Instagram: <a href="https://www.instagram.com/marseille.modamaior.oficial/" target="_blank">@marseille.modamaior.oficial</a></p>
+                <p>📘 Facebook: <a href="https://www.facebook.com/share/1AnTRZH5Q9/" target="_blank">Marseille Moda Maior</a></p>
+
+                <a href="https://wa.me/556599905458?text=Ol%C3%A1%21%20Eu%20visitei%20o%20seu%20site%20e%20gostaria%20de%20receber%20o%20CUPOM%20de%20desconto%21" target="_blank" class="whatsapp-link">
+                    Clique para ganhar um Cupom de DESCONTO!
+                </a>
+                <br><br>
             </div>
-        </div>
-    </section>
-
-    <section id="contato" class="section">
-        <div class="container">
-            <h2>Contatos</h2>
-            <p>📍 Endereço: Av. Jose Monteiro de Figueiredo, 65 - Cuiabá, MT, 78158-620</p>
-            <p>📞 WhatsApp: <a href="https://wa.me/556599905458" target="_blank">(65) 99905-458</a></p>
-            <p>📸 Instagram: <a href="https://www.instagram.com/marseille.modamaior.oficial/" target="_blank">www.instagram.com/marseille.modamaior.oficial</a></p>
-            <p>📘 Facebook: <a href="https://www.facebook.com/share/1AnTRZH5Q9/" target="_blank">www.facebook.com/share/1AnTRZH5Q9</a></p>
-
-            <a href="https://wa.me/556599905458?text=Ol%C3%A1%21%20Eu%20visitei%20o%20seu%20site%20e%20gostaria%20de%20receber%20o%20CUPOM%20de%20desconto%21" target="_blank" class="whatsapp-link">
-                Clique para ganhar um Cupom de DESCONTO!
-            </a>
-            <br><br>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <p>© 2025 Marseille Moda Maior - Todos os direitos reservados.</p>
     </footer>
 
-  <div class="localizacao-fixa">
-    <a href="https://www.google.com/maps?q=Av.+Jose+Monteiro+de+Figueiredo,+65+-+Cuiabá,+MT" target="_blank">
-        <i class="fas fa-map-marker-alt"></i> Localização
-    </a>
-</div>
+    <div class="localizacao-fixa">
+        <a href="http://googleusercontent.com/maps/google.com/1" target="_blank">
+            <i class="fas fa-map-marker-alt"></i> Localização
+        </a>
+    </div>
 
+    <a href="#" id="voltar-ao-topo" class="voltar-ao-topo" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js" defer></script>
+    
     <script>
-        let swiperFeminino = null;
-        let swiperMasculino = null;
-
-        function initSwiperFeminino() {
-            if (swiperFeminino) swiperFeminino.destroy(true, true);
-            swiperFeminino = new Swiper('.swiper-feminino', {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                loop: true,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next-feminino',
-                    prevEl: '.swiper-button-prev-feminino'
-                },
-                breakpoints: {
-                    768: { slidesPerView: 2 },
-                    1024: { slidesPerView: 3 }
-                }
-            });
-        }
-
-        function initSwiperMasculino() {
-            if (swiperMasculino) swiperMasculino.destroy(true, true);
-            swiperMasculino = new Swiper('.swiper-masculino', {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                loop: true,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next-masculino',
-                    prevEl: '.swiper-button-prev-masculino'
-                },
-                breakpoints: {
-                    768: { slidesPerView: 2 },
-                    1024: { slidesPerView: 3 }
-                }
-            });
-        }
-
-        function filtrarProdutos() {
-            const cat = document.getElementById("categoria").value;
-
-            if (cat === "feminino") {
-                document.getElementById("produtos-feminino").style.display = "block";
-                document.getElementById("produtos-masculino").style.display = "none";
-                initSwiperFeminino();
-            } else if (cat === "masculino") {
-                document.getElementById("produtos-feminino").style.display = "none";
-                document.getElementById("produtos-masculino").style.display = "block";
-                initSwiperMasculino();
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            filtrarProdutos();
-            document.getElementById("categoria").addEventListener("change", filtrarProdutos);
-        });
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17341612874/A9TxCNyJt_saEMqGkM1A',
+          'value': 1.0,
+          'currency': 'BRL'
+      });
     </script>
-<!-- Event snippet for Visualização do site conversion page -->
-<script>
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17341612874/A9TxCNyJt_saEMqGkM1A',
-      'value': 1.0,
-      'currency': 'BRL'
-  });
-</script>
-
-</body>
 
 </body>
 </html>
