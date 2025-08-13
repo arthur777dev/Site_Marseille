@@ -12,11 +12,10 @@ body {
     color: #444;
     line-height: 1.65;
     font-size: 16px;
-    /* Espaço no topo para o header e navbar fixos */
     padding-top: 225px; 
 }
 
-/* Header Fixo - TAMANHO FINAL E CONTEÚDO CENTRALIZADO */
+/* Header Fixo */
 header {
     position: fixed;
     top: 0;
@@ -26,9 +25,9 @@ header {
     color: #fff;
     z-index: 1100;
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;   /* Centraliza verticalmente */
-    height: 160px;          /* Altura final do header, bem maior */
+    justify-content: center;
+    align-items: center;
+    height: 160px;
     padding: 0 20px;
     text-align: center;
 }
@@ -46,10 +45,10 @@ header .logo p {
     font-weight: 400;
 }
 
-/* Navbar Fixa - ESTILO FINAL */
+/* Navbar Fixa */
 #main-nav {
     position: fixed;
-    top: 160px;     /* Posição exatamente abaixo do novo header */
+    top: 160px;
     left: 0;
     width: 100%;
     background: #ffffff;
@@ -61,8 +60,8 @@ header .logo p {
 }
 
 #main-nav a {
-    color: #b30606; /* Cor do texto alterada para vermelho */
-    font-weight: 700; /* Letras mais grossas (bold) */
+    color: #b30606;
+    font-weight: 700;
     text-decoration: none;
     margin: 0 15px;
     font-size: 16px;
@@ -94,13 +93,22 @@ h2 {
     text-align: center;
 }
 
-/* O resto do CSS permanece o mesmo */
 .filtro { margin-bottom: 40px; display: flex; justify-content: center; align-items: center; gap: 15px; font-size: 18px; }
 .filtro label { font-weight: 700; color: #b30606; }
 .filtro select { padding: 12px 18px; font-size: 18px; border: 2px solid #b30606; border-radius: 10px; outline: none; }
 .produto { text-align: center; background: #fff; border-radius: 15px; padding: 25px 15px; box-shadow: 0 6px 15px rgba(179, 6, 6, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; }
 .produto:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(179, 6, 6, 0.25); }
-.produto img { width: 100%; max-width: 280px; border-radius: 15px; margin-bottom: 15px; object-fit: cover; aspect-ratio: 1 / 1.25; }
+
+/* --- MODIFICAÇÃO APLICADA AQUI --- */
+.produto img {
+    width: 100%;
+    max-width: 280px;
+    height: 350px; /* Altura fixa para todas as imagens */
+    object-fit: contain; /* Garante que a imagem caiba no espaço sem cortar */
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
 .swiper { width: 100%; padding: 20px 0 40px 0; }
 .swiper-slide { display: flex; flex-direction: column; align-items: center; }
 .swiper-button-prev-feminino, .swiper-button-next-feminino, .swiper-button-prev-masculino, .swiper-button-next-masculino { color: #b30606; transform: scale(0.8); }
@@ -112,7 +120,7 @@ footer { background: #1a1a1a; color: #ddd; text-align: center; padding: 35px 20p
 .voltar-ao-topo { position: fixed; bottom: 20px; right: 20px; background-color: #b30606; color: #fff; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; text-decoration: none; z-index: 1000; opacity: 0; visibility: hidden; transform: translateY(20px); transition: all 0.3s ease; }
 .voltar-ao-topo.visivel { opacity: 1; visibility: visible; transform: translateY(0); }
 
-/* --- Media Query para Telas Pequenas (Mobile) --- */
+/* Media Query para Telas Pequenas (Mobile) */
 @media (max-width: 768px) {
     body {
         padding-top: 155px;
@@ -134,4 +142,7 @@ footer { background: #1a1a1a; color: #ddd; text-align: center; padding: 35px 20p
     h2 { font-size: 28px; }
     .filtro { flex-direction: column; }
     #contato a.whatsapp-link { font-size: 18px; padding: 12px 20px; }
+    .produto img {
+        height: 300px; /* Ajuste a altura para telas menores, se necessário */
+    }
 }
