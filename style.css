@@ -1,4 +1,3 @@
-/* Reset e Configurações Globais */
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +14,6 @@ body {
     padding-top: 225px; 
 }
 
-/* Header Fixo */
 header {
     position: fixed;
     top: 0;
@@ -45,7 +43,7 @@ header .logo p {
     font-weight: 400;
 }
 
-/* Navbar Fixa */
+
 #main-nav {
     position: fixed;
     top: 160px;
@@ -76,7 +74,7 @@ header .logo p {
     background-color: #b30606;
 }
 
-/* Seções */
+
 .section {
     padding: 60px 20px;
     background: #fafafa;
@@ -99,12 +97,12 @@ h2 {
 .produto { text-align: center; background: #fff; border-radius: 15px; padding: 25px 15px; box-shadow: 0 6px 15px rgba(179, 6, 6, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; }
 .produto:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(179, 6, 6, 0.25); }
 
-/* --- MODIFICAÇÃO APLICADA AQUI --- */
+
 .produto img {
     width: 100%;
     max-width: 280px;
-    height: 350px; /* Altura fixa para todas as imagens */
-    object-fit: contain; /* Garante que a imagem caiba no espaço sem cortar */
+    height: 350px; 
+    object-fit: contain; 
     border-radius: 15px;
     margin-bottom: 15px;
 }
@@ -120,7 +118,7 @@ footer { background: #1a1a1a; color: #ddd; text-align: center; padding: 35px 20p
 .voltar-ao-topo { position: fixed; bottom: 20px; right: 20px; background-color: #b30606; color: #fff; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; text-decoration: none; z-index: 1000; opacity: 0; visibility: hidden; transform: translateY(20px); transition: all 0.3s ease; }
 .voltar-ao-topo.visivel { opacity: 1; visibility: visible; transform: translateY(0); }
 
-/* Media Query para Telas Pequenas (Mobile) */
+
 @media (max-width: 768px) {
     body {
         padding-top: 155px;
@@ -143,6 +141,6 @@ footer { background: #1a1a1a; color: #ddd; text-align: center; padding: 35px 20p
     .filtro { flex-direction: column; }
     #contato a.whatsapp-link { font-size: 18px; padding: 12px 20px; }
     .produto img {
-        height: 300px; /* Ajuste a altura para telas menores, se necessário */
+        height: 300px; 
     }
 }
