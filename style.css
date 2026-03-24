@@ -19,7 +19,8 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(90deg, #b30606, #d31b1b);
+    /* Aplicando as cores C9633C e C85F37 no degradê */
+    background: linear-gradient(90deg, #C9633C, #C85F37);
     color: #fff;
     z-index: 1100;
     display: flex;
@@ -58,7 +59,7 @@ header .logo p {
 }
 
 #main-nav a {
-    color: #b30606;
+    color: #C9633C; /* Cor nova */
     font-weight: 700;
     text-decoration: none;
     margin: 0 15px;
@@ -71,7 +72,7 @@ header .logo p {
 #main-nav a:hover,
 #main-nav a:focus {
     color: #fff;
-    background-color: #b30606;
+    background-color: #C9633C; /* Cor nova */
 }
 
 
@@ -87,15 +88,15 @@ header .logo p {
 h2 {
     font-size: 36px;
     margin-bottom: 30px;
-    color: #b30606;
+    color: #C9633C; /* Cor nova */
     text-align: center;
 }
 
 .filtro { margin-bottom: 40px; display: flex; justify-content: center; align-items: center; gap: 15px; font-size: 18px; }
-.filtro label { font-weight: 700; color: #b30606; }
-.filtro select { padding: 12px 18px; font-size: 18px; border: 2px solid #b30606; border-radius: 10px; outline: none; }
-.produto { text-align: center; background: #fff; border-radius: 15px; padding: 25px 15px; box-shadow: 0 6px 15px rgba(179, 6, 6, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; }
-.produto:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(179, 6, 6, 0.25); }
+.filtro label { font-weight: 700; color: #C9633C; } /* Cor nova */
+.filtro select { padding: 12px 18px; font-size: 18px; border: 2px solid #C9633C; border-radius: 10px; outline: none; } /* Cor nova */
+.produto { text-align: center; background: #fff; border-radius: 15px; padding: 25px 15px; box-shadow: 0 6px 15px rgba(201, 99, 60, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; }
+.produto:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(201, 99, 60, 0.25); }
 
 
 .produto img {
@@ -109,13 +110,13 @@ h2 {
 
 .swiper { width: 100%; padding: 20px 0 40px 0; }
 .swiper-slide { display: flex; flex-direction: column; align-items: center; }
-.swiper-button-prev-feminino, .swiper-button-next-feminino, .swiper-button-prev-masculino, .swiper-button-next-masculino { color: #b30606; transform: scale(0.8); }
+.swiper-button-prev-feminino, .swiper-button-next-feminino, .swiper-button-prev-masculino, .swiper-button-next-masculino { color: #C9633C; transform: scale(0.8); } /* Cor nova */
 #contato a.whatsapp-link { display: inline-flex; align-items: center; gap: 12px; background-color: #25D366; color: #fff; font-weight: 700; font-size: 22px; padding: 14px 26px; border-radius: 30px; text-decoration: none; margin-top: 20px; }
 footer { background: #1a1a1a; color: #ddd; text-align: center; padding: 35px 20px; margin-top: 60px; }
-.localizacao-fixa { position: fixed; bottom: 20px; left: 20px; background: linear-gradient(45deg, #d90429, #b30606); color: #fff; padding: 12px 20px; border-radius: 50px; font-weight: 600; font-size: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); z-index: 1000; display: flex; align-items: center; gap: 10px; transition: all 0.3s ease-in-out; }
+.localizacao-fixa { position: fixed; bottom: 20px; left: 20px; background: linear-gradient(45deg, #C9633C, #C85F37); color: #fff; padding: 12px 20px; border-radius: 50px; font-weight: 600; font-size: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); z-index: 1000; display: flex; align-items: center; gap: 10px; transition: all 0.3s ease-in-out; }
 .localizacao-fixa a { color: #fff; text-decoration: none; display: flex; align-items: center; gap: 8px; }
 .localizacao-fixa i { font-size: 20px; }
-.voltar-ao-topo { position: fixed; bottom: 20px; right: 20px; background-color: #b30606; color: #fff; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; text-decoration: none; z-index: 1000; opacity: 0; visibility: hidden; transform: translateY(20px); transition: all 0.3s ease; }
+.voltar-ao-topo { position: fixed; bottom: 20px; right: 20px; background-color: #C9633C; color: #fff; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; text-decoration: none; z-index: 1000; opacity: 0; visibility: hidden; transform: translateY(20px); transition: all 0.3s ease; }
 .voltar-ao-topo.visivel { opacity: 1; visibility: visible; transform: translateY(0); }
 
 
