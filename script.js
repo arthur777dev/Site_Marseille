@@ -10,11 +10,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 slidesPerView: 1,
                 spaceBetween: 20,
                 loop: true,
+                observer: true,
+                observeParents: true,
                 autoplay: { delay: 3000, disableOnInteraction: false },
                 navigation: { nextEl: nextButton, prevEl: prevButton },
                 breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
             });
         }
+
+        // Inicializa o carrossel feminino logo ao carregar a página
+        swiperFeminino = initSwiper('.swiper-feminino', '.swiper-button-next-feminino', '.swiper-button-prev-feminino');
 
         function filtrarProdutos() {
             const cat = categoriaSelect.value;
@@ -24,15 +29,18 @@ document.addEventListener("DOMContentLoaded", () => {
             if (cat === "feminino") {
                 produtosFeminino.style.display = "block";
                 produtosMasculino.style.display = "none";
-                if (!swiperFeminino) swiperFeminino = initSwiper('.swiper-feminino', '.swiper-button-next-feminino', '.swiper-button-prev-feminino');
+                if (swiperFeminino) swiperFeminino.update();
             } else if (cat === "masculino") {
                 produtosFeminino.style.display = "none";
                 produtosMasculino.style.display = "block";
-                if (!swiperMasculino) swiperMasculino = initSwiper('.swiper-masculino', '.swiper-button-next-masculino', '.swiper-button-prev-masculino');
+                if (!swiperMasculino) {
+                    swiperMasculino = initSwiper('.swiper-masculino', '.swiper-button-next-masculino', '.swiper-button-prev-masculino');
+                } else {
+                    swiperMasculino.update();
+                }
             }
         }
         
-        filtrarProdutos();
         categoriaSelect.addEventListener("change", filtrarProdutos);
     }
 
