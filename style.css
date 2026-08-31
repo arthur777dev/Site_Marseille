@@ -3,7 +3,7 @@
    Altere os códigos HEX abaixo para mudar as cores em todo o site de uma vez.
    ========================================================================== */
 :root {
-    --cor-principal: #adebb3;     /* Cabeçalho, botões, títulos e links */
+    --cor-principal: #150343;     /* Cabeçalho, botões, títulos e links */
     --cor-secundaria: #ffffff;    /* Fundo do menu e cards */
     --cor-fundo: #fafafa;         /* Fundo das seções */
     --cor-texto: #444444;         /* Texto principal */
